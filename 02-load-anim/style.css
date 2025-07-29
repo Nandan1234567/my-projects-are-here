@@ -1,0 +1,65 @@
+/* reading comment fr css */
+
+/*   reset default browser setting and also remove default padding and margin */
+/* in box sizing border box if give value it includes padding amd margin */
+* {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* for whole page */
+body {
+  background-color: rgb(14, 168, 117);
+}
+
+.wrapper {
+  justify-content: center; /* center children horizontally */
+  align-items: center; /* center children vertically */
+  display: flex; /* in this enable flex layout declared in parent like able to crete boxes */
+  min-height: 100vh; /*  full screen height for 100 it keeps loading at center */
+}
+
+/*  inside wrapper there is a loader which holds all 4  */
+.wrapper .loader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* designing balls */
+.loader .loadMe {
+  background-color: rgb(249, 251, 252); /* white box */
+  width: 20px; /* box size */
+  height: 20px;
+  margin: 0 7px;
+  border-radius: 50px; /* make square box to ball */
+  animation: load 1.5s ease infinite; /* animation runs infinitely  at 1.5s */
+}
+
+/* each ball has aa a different delay  */
+.loader .loadMe.one {
+  animation-delay: 0.1s;
+}
+.loader .loadMe.two {
+  animation-delay: 0.3s;
+}
+.loader .loadMe.three {
+  animation-delay: 0.5s;
+}
+.loader .loadMe.four {
+  animation-delay: 0.7s;
+}
+
+/* animation defination called load  for bouncing */
+@keyframes load {
+  0% { 
+    width: 30px;  /* at 0% how much  w and h should load  */
+    height: 30px;
+  }
+  50% {
+    width: 20px;  /* value decreased for shrinking effect */
+    height: 20px;
+  }
+}
