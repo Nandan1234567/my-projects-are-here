@@ -1,0 +1,39 @@
+* {
+  margin: 10px; /* distance b/w two object */
+  padding: 0px; /* distance b/w inside text or object */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EEAECA;
+}
+.card {
+  width: 360px; /* how wide it should be */
+  display: inline-block;
+
+  background: linear-gradient(#94BBE9,#EEAECA);
+  padding: 20px;
+  margin: 20px;
+  font-family: sans-serif; /* style of  font */
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+}
+
+/* working on scrollbar */
+
+::-webkit-scrollbar {
+  background-color: #94BBE9;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94BBE9;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(#94BBE9,#EEAECA) ;
+}
+::-webkit-scrollbar-track{
+    background: black
+}
