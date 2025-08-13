@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+.container {
+  display: flex; /* contnet making center   */
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(15, 14, 15);
+
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none; /* removing link line  for child */
+  color: aquamarine;
+  border: 2px solid aquamarine; /* border for button and white color style */
+  padding: 2rem 5rem; /* no comma in b/w top bottom left right */
+  transition: all 1s;
+  overflow: hidden; /* any text or something wont come outside or doesnt flow bcz of hidden  */
+  position: relative;
+  font-weight: bold;
+  
+}
+
+a::before {
+  content: "DOWNLOAD"; /* this is content before hover me */
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%; /* this h and w 100% makes content to cover to center */
+  width: 100%;
+  display: flex; /* contnet making center   */
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);  /* coming my be x + or x- or y+ or y- 100% , if i use 50% it comes from middle*/
+  transition: all 1s;
+}
+
+a:hover::before {
+  background-color: aquamarine; /* before attribute */
+  transform: translateY(0%);  /* if use 10% or 50% it will stuck there hovering */
+}
