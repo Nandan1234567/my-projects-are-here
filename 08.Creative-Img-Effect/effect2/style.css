@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #a8edea , #ecccfa)
+}
+
+.container {
+  /* box placement */
+  width: 40rem;
+  height: 20rem;
+  position: relative;
+  /* big img sould not go outside */
+  overflow: hidden;
+}
+
+.container img {
+  /* in container full image display using width */
+  width: 100%;
+  transition: all 1s;
+  border: 2px solid #ecccfa;
+ box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  /* text inside img */
+  position: absolute;
+  top: 0;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8) ;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  /* center the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  transition: all 1s;
+  background: rgb(0, 0, 0);
+  transform: translateX(-100%);
+}
+
+.container:hover .content {
+  transform: translateX(0);
+}
+
+.head {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 80px;
+  color: aliceblue;
+
+  /* this makes any text center */
+  /*from left it takes 50% space and top 35px if u need center then use 50%  in top then use -ve trandform translae first in (for X 50% then Y)*/
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute; /* stick to that place */
+  text-shadow: 2px 2px 5px black;
+}
+
+.container:hover img {
+  transform: translateX(100%);
+  filter: brightness(0.8) blur(1px);
+}
+.head:hover {
+  color: black;
+}
