@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tip Calculator</h1>
+
+      <!-- u need to enter for bill amount first label and attach to input and take value -->
+      <label for="bill">Bill Amount :</label>
+      <input type="number" id="bill" placeholder="Enter bill amount" />
+      <br />
+
+      <!-- similarly create a label and input number in percentage for tip value  -->
+      <label for="tip"> Tip percentage % : </label>
+      <input type=" number" id="tip" placeholder="Enter a  tip in percentage" />
+
+      <button type="button" id="calculateButton">Calculate</button>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
